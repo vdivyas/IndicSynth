@@ -1,6 +1,5 @@
 # IndicSynth
-
-We shall soon details on how to access the dataset.
+We shall soon update details on how to access the dataset.
 
 
 
