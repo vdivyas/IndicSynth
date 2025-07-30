@@ -21,7 +21,7 @@ It is intended for **non-commercial, academic research only**.
 ## Citation
 If you use IndicSynth, please cite:
 
-@inproceedings{sharma-etal-2025-indicsynth,
+<pre> ```bibtex @inproceedings{sharma-etal-2025-indicsynth,
     title = "{I}ndic{S}ynth: A Large-Scale Multilingual Synthetic Speech Dataset for Low-Resource {I}ndian Languages",
     author = "Sharma, Divya V  and
       Ekbote, Vijval  and
@@ -38,4 +38,4 @@ If you use IndicSynth, please cite:
     url = "https://aclanthology.org/2025.acl-long.1070/",
     pages = "22037--22060",
     ISBN = "979-8-89176-251-0"
-}
+}</pre>
