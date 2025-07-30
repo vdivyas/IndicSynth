@@ -15,7 +15,7 @@
 IndicSynth shall soon be hosted on HuggingFace. The dataset link shall be updated on this repository.
 
 ## License
-This dataset is released under the **CC BY-NC 4.0 License**.  
+IndicSynth is released under the **CC BY-NC 4.0 License**.  
 It is intended for **non-commercial, academic research only**.
 
 ## Citation
