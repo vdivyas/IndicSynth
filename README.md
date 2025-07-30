@@ -21,7 +21,7 @@ It is intended for **non-commercial, academic research only**.
 ## Citation
 If you use IndicSynth, please cite:
 
-<pre> ```bibtex @inproceedings{sharma-etal-2025-indicsynth,
+<pre>@inproceedings{sharma-etal-2025-indicsynth,
     title = "{I}ndic{S}ynth: A Large-Scale Multilingual Synthetic Speech Dataset for Low-Resource {I}ndian Languages",
     author = "Sharma, Divya V  and
       Ekbote, Vijval  and
