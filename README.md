@@ -1,7 +1,9 @@
 # IndicSynth
 *A Large-Scale Multilingual Synthetic Speech Dataset for Low-Resource Indian Languages*
 
-**Awarded the Outstanding Paper Award, ACL 2025**
+**🏆 Outstanding Paper Award, ACL 2025**
+
+---
 
 ## Overview
 
@@ -11,15 +13,65 @@
 > 12 languages: Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Odia, Punjabi, Sanskrit, Tamil, Telugu, Urdu  
 > Useful for ADD, speaker verification (SV), and bias studies  
 
-## Data Access 
-IndicSynth shall soon be hosted on HuggingFace. The dataset link shall be updated on this repository.
+---
+
+## 📂 Dataset Structure
+
+Each language folder contains:
+
+IndicSynth/
+├── Bengali/
+│ ├── audio/ # All .wav files (synthetic clips)
+│ └── metadata.csv # Metadata for all synthetic clips
+├── Gujarati/
+│ ├── audio/
+│ └── metadata.csv
+
+
+Each 'metadata.csv' includes:
+
+- Generative Model (xtts_v2 / vits / freevc24)
+- Speaker IDs
+- Gender
+- Transcript (if applicable)
+- File path to synthetic audio
+
+---
+
+## How the Dataset Was Created?
+
+Synthetic data was generated using:
+
+| Model      | Type      | Transcript | Fine-Tuned |
+|------------|-----------|------------|-------------|
+| 'xtts_v2'  | TTS       | Yes        | Yes (for 10 langs) |
+| 'vits'     | TTS       | Yes        | No          |
+| 'freevc24' | VC        | No         | No          |
+
+Mimicry subset: Same target speaker  
+Diversity subset: Varied speakers
+
+For more details, please check the Table 1 and Section 3 of our paper: https://aclanthology.org/2025.acl-long.1070.pdf
+
+---
+
+## 📦 Access the Dataset
+
+**HuggingFace:** https://huggingface.co/datasets/vdivyasharma/IndicSynth
+
+You can load a specific language using:
+
+```python
+from datasets import load_dataset
+
+ds = load_dataset("vdivyasharma/IndicSynth", name="Hindi", split="train")
 
 ## License
 IndicSynth is released under the **CC BY-NC 4.0 License**.  
 It is intended for **non-commercial, academic research only**.
 
 ## Citation
-If you use IndicSynth, please cite:
+If you use IndicSynth, please cite the following papers:
 
 <pre>@inproceedings{sharma-etal-2025-indicsynth,
     title = "{I}ndic{S}ynth: A Large-Scale Multilingual Synthetic Speech Dataset for Low-Resource {I}ndian Languages",
@@ -39,3 +91,25 @@ If you use IndicSynth, please cite:
     pages = "22037--22060",
     ISBN = "979-8-89176-251-0"
 }</pre>
+
+
+
+<pre>@article{IndicSuperb,
+author = {Javed, Tahir and Bhogale, Kaushal and Raman, Abhigyan and Kumar, Pratyush and Kunchukuttan, Anoop and Khapra, Mitesh},
+year = {2023},
+month = {06},
+pages = {12942-12950},
+title = {IndicSUPERB: A Speech Processing Universal Performance Benchmark for Indian Languages},
+volume = {37},
+journal = {Proceedings of the AAAI Conference on Artificial Intelligence},
+doi = {10.1609/aaai.v37i11.26521}
+}</pre>
+
+
+## Citation
+For questions or feedback, please feel free to reach out at divyas@iiitd.ac.in.
+
+## Acknowledgments
+> ACL Diversity & Inclusion Subsidy for providing travel support to attend the ACL 2025 in-person.
+> HuggingFace for providing the necessary support to host the IndicSynth
+
