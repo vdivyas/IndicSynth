@@ -47,7 +47,7 @@ Synthetic data was generated using:
 
 | Model      | Type      | Transcript | Fine-Tuned |
 |------------|-----------|------------|-------------|
-| xtts_v2  | TTS       | Yes        | Yes (for 10 langs) |
+| xtts_v2  | TTS       | Yes        | Yes (for 10 languages) |
 | vits     | TTS       | Yes        | No          |
 | freevc24 | VC        | No         | No          |
 
