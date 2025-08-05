@@ -56,8 +56,8 @@ Synthetic data was generated using:
 | vits     | TTS       | Yes        | No          |
 | freevc24 | VC        | No         | No          |
 
-Mimicry subset: Same target speaker  
-Diversity subset: Varied speakers
+Mimicry subset: For anti-spoofing research
+Diversity subset: Contains diverse set of realistic synthetic voices for multilingual audio deepfake detection research
 
 For more details, please see the Table 1 and Section 3 of our paper: https://aclanthology.org/2025.acl-long.1070.pdf
 
