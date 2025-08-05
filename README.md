@@ -114,7 +114,7 @@ doi = {10.1609/aaai.v37i11.26521}
 
 ---
 
-## 💬 Citation
+## 💬 Contact
 For questions or feedback, please feel free to reach out at divyas@iiitd.ac.in.
 
 ## 🙏 Acknowledgments
