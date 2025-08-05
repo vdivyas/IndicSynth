@@ -19,6 +19,8 @@
 
 Each language folder contains:
 
+<pre>
+    
 IndicSynth/
 ├── Bengali/
 │ ├── audio/ # All .wav files (synthetic clips)
@@ -27,6 +29,7 @@ IndicSynth/
 │ ├── audio/
 │ └── metadata.csv
 
+</pre>
 
 Each 'metadata.csv' includes:
 
