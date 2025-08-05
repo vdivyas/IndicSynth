@@ -41,7 +41,9 @@ Each 'metadata.csv' includes:
 
 
 📝 **Note on Transcripts in Metadata**
+
 The transcripts included in the metadata.csv files represent the intended text prompts used during synthetic speech generation via TTS models. We provide these transcripts to enable future explorations, but do not guarantee perfect alignment with the generated audio. If you intend to use IndicSynth for speech-to-text or similar tasks, we strongly recommend conducting careful human evaluation with proficient native speakers of the respective languages.
+
 ---
 
 ## ⚙️ IndicSynth Generation?
