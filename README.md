@@ -5,7 +5,7 @@
 
 ---
 
-## Overview
+## 🧠 Overview
 
 **IndicSynth** is a novel multilingual synthetic speech dataset designed to advance multilingual **audio deepfake detection (ADD)** and **anti-spoofing** research. It covers **12 low-resource Indian languages** and provides both **mimicry** and **diversity** subsets.
 
@@ -38,7 +38,7 @@ Each 'metadata.csv' includes:
 
 ---
 
-## How the Dataset Was Created?
+## ⚙️ IndicSynth Generation?
 
 Synthetic data was generated using:
 
@@ -90,7 +90,9 @@ If you use IndicSynth, please cite the following papers:
     url = "https://aclanthology.org/2025.acl-long.1070/",
     pages = "22037--22060",
     ISBN = "979-8-89176-251-0"
-}</pre>
+}
+
+</pre>
 
 
 
@@ -103,14 +105,16 @@ title = {IndicSUPERB: A Speech Processing Universal Performance Benchmark for In
 volume = {37},
 journal = {Proceedings of the AAAI Conference on Artificial Intelligence},
 doi = {10.1609/aaai.v37i11.26521}
-}</pre>
+}
+
+</pre>
 
 ---
 
-## Citation
+## 💬 Citation
 For questions or feedback, please feel free to reach out at divyas@iiitd.ac.in.
 
-## Acknowledgments
-> ACL Diversity & Inclusion Subsidy for providing travel support to attend the ACL 2025 in-person.
-> HuggingFace for providing the necessary support to host the IndicSynth
+## 🙏 Acknowledgments
+> 🌍 ACL Diversity & Inclusion Subsidy for enabling in-person presentation at ACL 2025
+> 🤝 HuggingFace for dataset hosting support
 
