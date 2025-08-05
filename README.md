@@ -61,11 +61,11 @@ For more details, please check the Table 1 and Section 3 of our paper: https://a
 
 You can load a specific language using:
 
-'''python
+```python
 from datasets import load_dataset
 
 ds = load_dataset("vdivyasharma/IndicSynth", name="Hindi", split="train")
-'''
+```
 ## License
 IndicSynth is released under the **CC BY-NC 4.0 License**.  
 It is intended for **non-commercial, academic research only**.
