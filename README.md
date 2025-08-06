@@ -75,10 +75,11 @@ import os
 import soundfile as sf
 from datasets import load_dataset
 
-ds = load_dataset("vdivyasharma/IndicSynth", name="Hindi", split="train")
+language = "Hindi"
+ds = load_dataset("vdivyasharma/IndicSynth", name=language, split="train")
 
 # Output directory
-output_dir = "Hindi"
+output_dir = language
 os.makedirs(output_dir, exist_ok=True)
 
 # Loop through dataset and save each clip
