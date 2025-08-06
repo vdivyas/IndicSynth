@@ -104,7 +104,7 @@ for example in tqdm(dataset):
     
     # Store metadata row
     row = {k: v for k, v in example.items() if k != "audio"}
-    row["path"] = audio_path
+    row["file_name"] = audio_path
     metadata_rows.append(row)
 
 # Save metadata to CSV
