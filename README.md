@@ -71,9 +71,26 @@ For more details, please see the Table 1 and Section 3 of our paper: https://acl
 You can load a specific language using:
 
 ```python
+import os
+import soundfile as sf
 from datasets import load_dataset
 
 ds = load_dataset("vdivyasharma/IndicSynth", name="Hindi", split="train")
+
+# Output directory
+output_dir = "Hindi"
+os.makedirs(output_dir, exist_ok=True)
+
+# Loop through dataset and save each clip
+for example in dataset:
+    audio_array = example["audio"]["array"]
+    sampling_rate = example["audio"]["sampling_rate"]
+    
+    # Extract original filename
+    original_name = example.get("file") or example.get("path") or example.get("audio")["path"].split("/")[-1]
+    
+    # Save to disk
+    sf.write(os.path.join(output_dir, original_name), audio_array, sampling_rate)
 ```
 ## License
 IndicSynth is released under the **CC BY-NC 4.0 License**.  
