@@ -68,7 +68,7 @@ For more details, please see the Table 1 and Section 3 of our paper: https://acl
 
 **HuggingFace:** https://huggingface.co/datasets/vdivyasharma/IndicSynth
 
-You can load a specific language using:
+You can load data in a specific target language using the following code:
 
 ```python
 import os
