@@ -80,20 +80,34 @@ language = "Hindi" # Specify the target language here
 # Load Dataset
 dataset = load_dataset("vdivyasharma/IndicSynth", name=language, split="train") 
 
-# Output directory
+# Create target directory structure
 output_dir = language
-os.makedirs(output_dir, exist_ok=True)
+audio_dir = os.path.join(output_dir, "audio")
+os.makedirs(audio_dir, exist_ok=True)
+
+# Store metadata rows here
+metadata_rows = []
 
 # Loop through dataset and save each clip
-for example in dataset:
+for example in tqdm(dataset):
     audio_array = example["audio"]["array"]
     sampling_rate = example["audio"]["sampling_rate"]
     
-    # Extract original filename
+    # Get filename
     original_name = example.get("file") or example.get("path") or example["audio"]["path"].split("/")[-1]
     
-    # Save to disk
-    sf.write(os.path.join(output_dir, original_name), audio_array, sampling_rate)
+    # Save audio to audio/ subfolder
+    audio_path = os.path.join("audio", original_name)  # relative path for metadata
+    sf.write(os.path.join(output_dir, audio_path), audio_array, sampling_rate)
+    
+    # Store metadata row
+    row = {k: v for k, v in example.items() if k != "audio"}
+    row["path"] = audio_path
+    metadata_rows.append(row)
+
+# Save metadata to CSV
+df = pd.DataFrame(metadata_rows)
+df.to_csv(os.path.join(output_dir, "metadata.csv"), index=False)
 
 ```
 ## License
