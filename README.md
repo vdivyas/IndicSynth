@@ -76,7 +76,9 @@ import soundfile as sf
 from datasets import load_dataset
 
 language = "Hindi" # Specify the target language here
-dataset = load_dataset("vdivyasharma/IndicSynth", name=language, split="train")  # ✅ Use "dataset" not "ds"
+
+# Load Dataset
+dataset = load_dataset("vdivyasharma/IndicSynth", name=language, split="train") 
 
 # Output directory
 output_dir = language
