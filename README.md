@@ -75,8 +75,8 @@ import os
 import soundfile as sf
 from datasets import load_dataset
 
-language = "Hindi"
-ds = load_dataset("vdivyasharma/IndicSynth", name=language, split="train")
+language = "Hindi" # Specify the target language here
+dataset = load_dataset("vdivyasharma/IndicSynth", name=language, split="train")  # ✅ Use "dataset" not "ds"
 
 # Output directory
 output_dir = language
@@ -88,10 +88,11 @@ for example in dataset:
     sampling_rate = example["audio"]["sampling_rate"]
     
     # Extract original filename
-    original_name = example.get("file") or example.get("path") or example.get("audio")["path"].split("/")[-1]
+    original_name = example.get("file") or example.get("path") or example["audio"]["path"].split("/")[-1]
     
     # Save to disk
     sf.write(os.path.join(output_dir, original_name), audio_array, sampling_rate)
+
 ```
 ## License
 IndicSynth is released under the **CC BY-NC 4.0 License**.  
