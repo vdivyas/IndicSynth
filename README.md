@@ -74,6 +74,8 @@ You can load data in a specific target language using the following code:
 import os
 import soundfile as sf
 from datasets import load_dataset
+from tqdm import tqdm
+import pandas as pd
 
 language = "Hindi" # Specify the target language here
 
@@ -108,6 +110,7 @@ for example in tqdm(dataset):
 # Save metadata to CSV
 df = pd.DataFrame(metadata_rows)
 df.to_csv(os.path.join(output_dir, "metadata.csv"), index=False)
+
 
 ```
 ## License
