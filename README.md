@@ -15,7 +15,7 @@
 **Useful for:**
 
 1. *Multilingual audio deepfake detection* (ADD) research or mitigating linguistic biases in audio deepfake detection systems
-2. Enhancing the robustness of *speaker verification (SV)* systems against spoofing (impersonation) attacks and developing anti-spoofing solutions
+2. Enhancing the robustness of *speaker verification (SV)* systems against spoofing (impersonation) attacks and developing *anti-spoofing solutions*
 3. *Cross-lingual or gender bias studies* in speech synthesis and recognition systems 
 
 ---
